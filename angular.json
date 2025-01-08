@@ -29,6 +29,16 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/fonts",
+                "output": "assets/fonts"
               }
             ],
             "styles": [
@@ -43,6 +53,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/caruso-culinary/",
               "budgets": [
                 {
                   "type": "initial",
@@ -93,6 +104,16 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/fonts",
+                "output": "assets/fonts"
               }
             ],
             "styles": [

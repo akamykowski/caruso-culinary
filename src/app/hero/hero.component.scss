@@ -1,0 +1,259 @@
+/* ---------------------------------
+   Color Variables
+---------------------------------- */
+$hero-bg-start: #0f1a2a; // Dark navy
+$hero-bg-end: #1f5cab;   // Lighter blue
+$text-color: #ffffff;    // White text
+
+/* ---------------------------------
+   Base Font Setup
+---------------------------------- */
+* {
+  font-family: "Work Sans", Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------------------------------
+   Hero Section Wrapper
+---------------------------------- */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; // Full screen height
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(
+      to bottom right,
+      rgba(15, 26, 42, 0.7),
+      rgba(31, 92, 171, 0.7)
+    ),
+    url('/assets/images/hero-bg-texture.jpg') center/cover no-repeat;
+  overflow: hidden;
+  text-align: center;
+  /* Optional padding if you want more space at the top/bottom
+     padding: 2rem 1rem; */
+}
+
+/* ---------------------------------
+   Decorative Circles
+---------------------------------- */
+.accent-circle {
+  position: absolute;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  z-index: 1;
+  background: radial-gradient(
+    circle at 30% 30%,
+    #ffffff 0%,
+    #fafafa 40%,
+    #f2f2f2 100%
+  );
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, opacity 0.4s ease, background 0.4s ease;
+
+  /* More dramatic hover effect: slightly bigger scale,
+     darker center in the gradient, etc. */
+  &:hover {
+    transform: scale(1.12);
+    background: radial-gradient(
+      circle at 70% 70%,
+      #ffffff 0%,
+      #eaeaea 40%,
+      #d8d8d8 100%
+    );
+    opacity: 0.35;
+  }
+
+  &.circle1 {
+    width: 300px;
+    height: 300px;
+    top: 8%;
+    left: 10%;
+    opacity: 0.25;
+    animation: floatCircle 8s ease-in-out infinite;
+  }
+
+  &.circle2 {
+    width: 200px;
+    height: 200px;
+    bottom: 10%;
+    right: 5%;
+    opacity: 0.2;
+    animation: floatCircle 10s ease-in-out infinite;
+  }
+}
+
+/* ---------------------------------
+   Subtle Noise Overlay
+---------------------------------- */
+.noise-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: url('/assets/images/noise.jpg') repeat;
+  opacity: 0.1;
+}
+
+/* ---------------------------------
+   Foreground Overlay
+---------------------------------- */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(15, 26, 42, 0.55);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ---------------------------------
+   Hero Content
+---------------------------------- */
+.hero-content {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $text-color;
+  padding: 2rem;
+  margin-top: 3rem; // You can remove this if you don't need extra top space
+}
+
+/* Logo */
+.hero-logo {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.03));
+  max-width: 400px;
+  height: auto;
+  margin-bottom: 1.5rem; // Less spacing than before
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+
+  @media (max-width: 768px) {
+    max-width: 280px;
+  }
+}
+
+/* Subtitle: Personal Dining By */
+.hero-subtitle {
+  font-size: 1rem; // normalized
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s 0.2s ease forwards;
+}
+
+/* Title (Chef Name) */
+.hero-title {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  font-size: 2.4rem; // a bit smaller than 3rem
+  font-weight: 600;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+  animation: fadeInUp 0.8s 0.3s ease forwards;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+/* Tagline */
+.hero-tagline {
+  font-size: 1.2rem; // normalized
+  margin-bottom: 1.75rem;
+  max-width: 600px;
+  opacity: 0;
+  animation: fadeInUp 0.8s 0.5s ease forwards;
+  font-weight: 400;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+/* Phone Callout (not a link / not a button) */
+.phone-callout {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: $text-color;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  margin-top: 0.5rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s 0.7s ease forwards;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+/* ---------------------------------
+   Scroll Indicator
+---------------------------------- */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $text-color;
+  font-size: 1rem;
+  opacity: 0;
+  animation: fadeInUp 1s 1s ease forwards, pulseText 3s 1.5s infinite;
+}
+
+/* Subtle pulsing or fade for the "More content coming soon..." text */
+@keyframes pulseText {
+  0%, 100% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateX(-50%) scale(1.02);
+  }
+}
+
+/* ---------------------------------
+   Keyframes
+---------------------------------- */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes floatCircle {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(0px); }
+}

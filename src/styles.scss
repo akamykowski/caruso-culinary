@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/assets/fonts/WorkSans/WorkSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* Supports a range of weights */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/assets/fonts/WorkSans/WorkSans-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* Supports a range of weights */
+  font-style: italic;
+}
+
+$color-primary: #0F1A2A; // example navy/dark color from the logo
+$color-accent: #1F5CAB; // a bright blue from the logo
+$color-background: #FFFFFF; // white
+
+body {
+  margin: 0;
+}
