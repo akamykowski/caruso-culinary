@@ -28,17 +28,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
-              },
-              {
-                "glob": "**/*",
                 "input": "src/assets",
                 "output": "assets"
-              },
-              {
-                "glob": "**/*",
-                "input": "src/assets/fonts",
-                "output": "assets/fonts"
               }
             ],
             "styles": [
@@ -103,17 +94,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
-              },
-              {
-                "glob": "**/*",
                 "input": "src/assets",
                 "output": "assets"
-              },
-              {
-                "glob": "**/*",
-                "input": "src/assets/fonts",
-                "output": "assets/fonts"
               }
             ],
             "styles": [

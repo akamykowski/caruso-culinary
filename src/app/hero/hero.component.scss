@@ -32,7 +32,7 @@ $text-color: #ffffff;    // White text
       rgba(15, 26, 42, 0.7),
       rgba(31, 92, 171, 0.7)
     ),
-    url('/assets/images/hero-bg-texture.jpg') center/cover no-repeat;
+    url('/caruso-culinary/assets/images/hero-bg-texture.jpg') center/cover no-repeat;
   overflow: hidden;
   text-align: center;
   /* Optional padding if you want more space at the top/bottom
@@ -99,7 +99,7 @@ $text-color: #ffffff;    // White text
   left: 0;
   z-index: 2;
   pointer-events: none;
-  background: url('/assets/images/noise.jpg') repeat;
+  background: url('/caruso-culinary/assets/images/noise.jpg') repeat;
   opacity: 0.1;
 }
 
