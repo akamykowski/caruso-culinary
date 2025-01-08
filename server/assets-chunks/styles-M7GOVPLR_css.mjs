@@ -1,0 +1,2 @@
+export default `@font-face{font-family:Work Sans;src:url(/assets/fonts/WorkSans/WorkSans-VariableFont_wght.ttf) format("truetype");font-weight:100 900;font-style:normal}@font-face{font-family:Work Sans;src:url(/assets/fonts/WorkSans/WorkSans-Italic-VariableFont_wght.ttf) format("truetype");font-weight:100 900;font-style:italic}body{margin:0}
+`;
